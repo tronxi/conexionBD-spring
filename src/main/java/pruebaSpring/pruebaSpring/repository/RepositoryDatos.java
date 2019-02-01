@@ -30,10 +30,10 @@ public class RepositoryDatos {
 		return d;
 	}
 	
-	public String postUser(String nombre) {
+	public Dato postUser(String nombre) {
 		String resultado = " ";
 		System.out.println("RESULATDO " + resultado);
-		return resultado;
+		return new Dato(-2, nombre);
 	}
 
 }

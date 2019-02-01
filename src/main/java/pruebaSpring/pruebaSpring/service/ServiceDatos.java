@@ -25,7 +25,7 @@ public class ServiceDatos {
 		return sampleRepository.getDatoById(id);
 	}
 	
-	public String postUser(String nombre){
+	public Dato postUser(String nombre){
 		return sampleRepository.postUser(nombre);
 	}
 }
