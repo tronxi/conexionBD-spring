@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pruebaSpring.pruebaSpring.service.ServiceDatos;
 import pruebaSpring.pruebaSpring.modelos.*;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 public class ControllerDatos {
 	
@@ -24,13 +25,11 @@ public class ControllerDatos {
 		this.sampleService = sampleService;
 	}
 	
-	@CrossOrigin
 	@RequestMapping(value = "/dato/{id}", method = RequestMethod.GET)
 	public Dato welcome(@PathVariable("id") String id) {
 		return sampleService.getDatoById(id);
 	}
-	
-	@CrossOrigin
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String inicio() {
 		return "Servidor funcionando";
