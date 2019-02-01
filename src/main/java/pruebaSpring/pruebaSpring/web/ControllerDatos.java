@@ -24,12 +24,13 @@ public class ControllerDatos {
 		this.sampleService = sampleService;
 	}
 	
-	@CrossOrigin()
+	@CrossOrigin
 	@RequestMapping(value = "/dato/{id}", method = RequestMethod.GET)
 	public Dato welcome(@PathVariable("id") String id) {
 		return sampleService.getDatoById(id);
 	}
 	
+	@CrossOrigin
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String inicio() {
 		return "Servidor funcionando";
