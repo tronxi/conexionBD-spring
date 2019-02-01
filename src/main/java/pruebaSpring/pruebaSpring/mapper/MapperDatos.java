@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import pruebaSpring.pruebaSpring.modelos.*;
@@ -17,5 +18,6 @@ public interface MapperDatos {
 	Dato getDatoById(String id);
 	
 	@Insert("insert into tablaPrueba (nombre) values (#{nombre})")
+	@Options(useGeneratedKeys = true, keyProperty = "id")
 	void postUser(String nombre);
 }
