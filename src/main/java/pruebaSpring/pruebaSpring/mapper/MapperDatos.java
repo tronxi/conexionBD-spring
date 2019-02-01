@@ -17,6 +17,6 @@ public interface MapperDatos {
 	@Select("SELECT id, nombre from tablaPrueba where id = #{id}")
 	Dato getDatoById(String id);
 	
-	@Insert("insert into tablaPrueba (nombre) values ('#{nombre}')")
+	@Insert("insert into tablaPrueba (nombre) values (#{nombre})")
 	void postUser(String nombre);
 }
