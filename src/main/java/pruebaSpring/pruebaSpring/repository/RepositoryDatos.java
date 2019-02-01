@@ -32,7 +32,9 @@ public class RepositoryDatos {
 	
 	public Dato postUser(String nombre) {
 		String resultado = " ";
-		System.out.println("RESULATDO " + resultado);
+		Dato dato = sampleMapper.postUser(nombre);
+		System.out.println("RESULATDO " + dato.getId() + " nombre " + dato.getNombre());
+		
 		return new Dato(-2, nombre);
 	}
 
