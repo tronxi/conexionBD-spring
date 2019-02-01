@@ -43,7 +43,7 @@ public class ControllerDatos {
 	
 	@RequestMapping(value = "/dato", method = RequestMethod.POST)
     public Dato  persistPerson(@RequestBody Dato dato) {
-        System.out.println(dato.toString());
+        System.out.println("id " + dato.getId() + "nombre " + dato.getNombre());
         return new Dato(-1, "post");
     }
 
