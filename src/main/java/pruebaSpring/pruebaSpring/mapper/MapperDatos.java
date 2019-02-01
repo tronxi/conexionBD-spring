@@ -2,6 +2,7 @@ package pruebaSpring.pruebaSpring.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -14,4 +15,7 @@ public interface MapperDatos {
 	
 	@Select("SELECT id, nombre from tablaPrueba where id = #{id}")
 	Dato getDatoById(String id);
+	
+	@Insert("insert into tablaPrueba (nombre) values ('#{nombre}')")
+	String postUser(String nombre);
 }

@@ -24,4 +24,8 @@ public class ServiceDatos {
 	public Dato getDatoById(String id) {
 		return sampleRepository.getDatoById(id);
 	}
+	
+	public String postUser(String nombre){
+		return sampleRepository.postUser(nombre);
+	}
 }

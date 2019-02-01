@@ -29,5 +29,11 @@ public class RepositoryDatos {
 		}
 		return d;
 	}
+	
+	public String postUser(String nombre) {
+		String resultado = sampleMapper.postUser(nombre);
+		System.out.println("RESULATDO " + resultado);
+		return resultado;
+	}
 
 }
