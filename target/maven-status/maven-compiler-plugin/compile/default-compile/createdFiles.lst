@@ -1,0 +1,6 @@
+pruebaSpring\pruebaSpring\App.class
+pruebaSpring\pruebaSpring\modelos\Dato.class
+pruebaSpring\pruebaSpring\repository\RepositoryDatos.class
+pruebaSpring\pruebaSpring\web\ControllerDatos.class
+pruebaSpring\pruebaSpring\service\ServiceDatos.class
+pruebaSpring\pruebaSpring\mapper\MapperDatos.class
