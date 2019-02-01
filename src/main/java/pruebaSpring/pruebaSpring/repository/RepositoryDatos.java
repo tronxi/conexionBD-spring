@@ -36,5 +36,11 @@ public class RepositoryDatos {
 		
 		return new Dato(-2, nombre);
 	}
+	
+	public Dato deleteUser(String id) {
+		sampleMapper.deleteUser(id);
+		
+		return new Dato(-2, id);
+	}
 
 }

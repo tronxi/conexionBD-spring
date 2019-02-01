@@ -28,4 +28,8 @@ public class ServiceDatos {
 	public Dato postUser(String nombre){
 		return sampleRepository.postUser(nombre);
 	}
+	
+	public Dato deleteUser(String id) {
+		return sampleRepository.deleteUser(id);
+	}
 }

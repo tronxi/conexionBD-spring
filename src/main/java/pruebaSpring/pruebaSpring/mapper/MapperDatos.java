@@ -2,6 +2,7 @@ package pruebaSpring.pruebaSpring.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
@@ -19,4 +20,7 @@ public interface MapperDatos {
 	
 	@Insert("insert into tablaPrueba (nombre) values (#{nombre})")
 	void postUser(String nombre);
+	
+	@Delete("delete from tablaPrueba where id = #{id}")
+	void deleteUser(String id);
 }

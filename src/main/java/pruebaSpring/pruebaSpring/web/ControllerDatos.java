@@ -30,6 +30,11 @@ public class ControllerDatos {
 	public Dato welcome(@PathVariable("id") String id) {
 		return sampleService.getDatoById(id);
 	}
+	
+	@RequestMapping(value = "/dato/{id}", method = RequestMethod.DELETE)
+	public Dato deleteUser(@PathVariable("id") String id) {
+		return sampleService.deleteUser(id);
+	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String inicio() {
@@ -42,7 +47,7 @@ public class ControllerDatos {
 	}
 	
 	@RequestMapping(value = "/dato", method = RequestMethod.POST)
-    public Dato  persistPerson(@RequestBody Dato dato) {
+    public Dato postUser(@RequestBody Dato dato) {
         System.out.println("id " + dato.getId() + "nombre " + dato.getNombre());
         return sampleService.postUser(dato.getNombre());
     }
