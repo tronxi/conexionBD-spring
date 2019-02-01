@@ -17,5 +17,5 @@ public interface MapperDatos {
 	Dato getDatoById(String id);
 	
 	@Insert("insert into tablaPrueba (nombre) values ('#{nombre}')")
-	String postUser(String nombre);
+	void postUser(String nombre);
 }
